@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white font-mono">
+    <div className="min-h-screen bg-gray-900 text-white font-mono">
       {/* Header */}
       <header className="border-b border-gray-800 px-4 py-4">
         <div className="container mx-auto flex items-center justify-between">
@@ -47,39 +47,70 @@ export default function Home() {
           <div className="glitch-grid"></div>
         </div>
         <div className="container mx-auto max-w-5xl relative z-10">
-          <div className="flex flex-col items-start gap-6">
-            <div className="inline-block px-3 py-1 border border-gray-700 text-gray-400 text-xs">PROTOCOL STANDARD</div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="text-green-500">HTTP 402:</span> Payment Required
-            </h1>
-            <p className="text-2xl md:text-3xl font-medium mt-2 max-w-3xl">Money has been added to the internet.</p>
-            <p className="text-gray-400 max-w-2xl mt-4">
-              x402 is the open protocol for streaming micro-payments over stablecoins. Chain-agnostic. Internet-native.
-            </p>
+          <div className="flex flex-col md:flex-row items-start justify-between gap-6">
+            <div className="flex flex-col gap-6">
+              <div className="inline-block px-3 py-1 border border-gray-700 text-gray-400 text-xs">PROTOCOL STANDARD</div>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                <span className="text-green-500">HTTP 402:</span> Payment Required
+              </h1>
+              <p className="text-2xl md:text-3xl font-medium mt-2 max-w-3xl">Money has been added to the internet.</p>
+              <p className="text-gray-400 max-w-2xl mt-4">
+                x402 is the open protocol for streaming micro-payments over stablecoins. Chain-agnostic. Internet-native.
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-6">
-              <Link
-                href="#waitlist"
-                className="bg-white text-black px-6 py-3 font-medium flex items-center gap-2 hover:bg-gray-200 transition-colors"
-              >
-                Join the Waitlist <ArrowRight className="h-4 w-4" />
-              </Link>
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-4 mt-6">
                 <Link
-                  href="https://twitter.com"
-                  className="border border-gray-700 p-3 hover:bg-gray-900 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#waitlist"
+                  className="bg-white text-black px-6 py-3 font-medium flex items-center gap-2 hover:bg-gray-200 transition-colors"
                 >
-                  <Twitter className="h-5 w-5" />
+                  Join the Waitlist <ArrowRight className="h-4 w-4" />
                 </Link>
+                <div className="flex gap-3">
+                  <Link
+                    href="https://twitter.com"
+                    className="border border-gray-700 p-3 hover:bg-gray-900 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Twitter className="h-5 w-5" />
+                  </Link>
+                  <Link
+                    href="https://discord.com"
+                    className="border border-gray-700 p-3 hover:bg-gray-900 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle className="h-5 w-5" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="border border-gray-800 p-6 bg-gray-900 rounded-lg w-full md:w-80">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="h-3 w-3 rounded-full bg-red-500"></div>
+                <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
+                <div className="h-3 w-3 rounded-full bg-green-500"></div>
+                <span className="text-gray-500 text-sm ml-2">$X402 Token</span>
+              </div>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-gray-400 text-sm">Current Price</p>
+                  <p className="text-2xl font-bold">$0.00</p>
+                </div>
+                <div>
+                  <p className="text-gray-400 text-sm">Market Cap</p>
+                  <p className="text-2xl font-bold">$0.00</p>
+                </div>
+                <div>
+                  <p className="text-gray-400 text-sm">Total Supply</p>
+                  <p className="text-2xl font-bold">1,000,000,000</p>
+                </div>
                 <Link
-                  href="https://discord.com"
-                  className="border border-gray-700 p-3 hover:bg-gray-900 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#token"
+                  className="block text-center border border-gray-700 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
                 >
-                  <MessageCircle className="h-5 w-5" />
+                  View Token Details
                 </Link>
               </div>
             </div>
@@ -335,7 +366,7 @@ export default function Home() {
                     <div className="h-full w-0.5 bg-gray-800"></div>
                   </div>
                   <div>
-                    <h4 className="font-bold">Q2 2023: Protocol Specification</h4>
+                    <h4 className="font-bold">Q2 2025: Protocol Specification</h4>
                     <p className="text-gray-400 mt-1">Initial protocol specification and whitepaper release</p>
                   </div>
                 </div>
@@ -345,7 +376,7 @@ export default function Home() {
                     <div className="h-full w-0.5 bg-gray-800"></div>
                   </div>
                   <div>
-                    <h4 className="font-bold">Q3 2023: Developer SDK</h4>
+                    <h4 className="font-bold">Q3 2025: Developer SDK</h4>
                     <p className="text-gray-400 mt-1">Release of JavaScript SDK and developer documentation</p>
                   </div>
                 </div>
@@ -355,7 +386,7 @@ export default function Home() {
                     <div className="h-full w-0.5 bg-gray-800"></div>
                   </div>
                   <div>
-                    <h4 className="font-bold">Q4 2023: Mainnet Launch</h4>
+                    <h4 className="font-bold">Q4 2025: Mainnet Launch</h4>
                     <p className="text-gray-400 mt-1">Protocol mainnet launch with initial partner integrations</p>
                   </div>
                 </div>
@@ -364,7 +395,7 @@ export default function Home() {
                     <div className="h-6 w-6 rounded-full bg-gray-700"></div>
                   </div>
                   <div>
-                    <h4 className="font-bold">Q1 2024: Token Launch</h4>
+                    <h4 className="font-bold">Q1 2026: Token Launch</h4>
                     <p className="text-gray-400 mt-1">$X402 token launch and ecosystem expansion</p>
                   </div>
                 </div>
